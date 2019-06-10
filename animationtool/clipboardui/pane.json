@@ -1,0 +1,62 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+			"base" : "/animationtool/x.png",
+			"hover" : "/animationtool/x.png",
+			"pressed" : "/animationtool/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [100, 15],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+			"fileHeader" : "/animationtool/clipboardui/header.png",
+			"fileBody" : "/animationtool/clipboardui/body.png"
+		},
+
+		"h1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [3, 17],
+			"value" : "^#343434;Press Ctrl + X"
+		},
+
+		"background1" : {
+			"file" : "/animationtool/clipboardui/bg.png",
+			"zlevel" : 1,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+		
+		"clipout" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "null",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 95,
+			"position" : [3, 5],
+			"fontSize" : 7
+		}
+
+    },
+    
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/animationtool/clipboardui/main.lua"],
+	"scriptDelta" : 0
+}

@@ -1,0 +1,10 @@
+{
+  "author" : "Rexmeck",
+  "description" : "A Tool",
+  "friendlyName" : "Rexmeck Animation Tool",
+  "includes" : [],
+  "name" : "animationtool",
+  "priority" : 122,
+  "requires" : [],
+  "version" : "v0.45"
+}

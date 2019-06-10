@@ -1,0 +1,7 @@
+[
+	{
+		"op": "add",
+    	"path": "/normal/-",
+    	"value": { "label" : "RexmecK Animation Tool", "pane" : "/animationtool/mainui/pane.json", "icon" : "/animationtool/mainui/image/smallicon.png" }
+    }
+]

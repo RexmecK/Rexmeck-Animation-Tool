@@ -1,0 +1,10 @@
+{
+    "scripts" :
+    {
+        "key" : "class/key.lua",
+        "selector" : "class/selector.lua",
+        "editor" : "class/editor.lua",
+        "messageManager" : "class/messageManager.lua",
+        "clipboard" : "class/clipboard.lua"
+    }
+}

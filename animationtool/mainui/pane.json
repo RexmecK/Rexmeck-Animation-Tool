@@ -1,0 +1,577 @@
+{
+	"gui" : {
+
+		"close" : {
+			"type" : "button",
+			"base" : "/animationtool/mainui/image/x.png",
+			"hover" : "/animationtool/mainui/image/x.png",
+			"pressed" : "/animationtool/mainui/image/x.png",
+			"pressedOffset" : [0, 0],
+			"callback" : "close",
+			"position" : [318, 179],
+			"zlevel" : 99
+		},
+
+		"background" : {
+			"zlevel" : -1,
+			"type" : "background",
+			"fileHeader" : "/animationtool/mainui/image/header.png",
+			"fileBody" : "/animationtool/mainui/image/body.png"
+		},
+
+		"h1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [3, 180],
+			"value" : "^#343434;RexmecK Animation Tool v0.4"
+		},
+		
+		"clipboard_input" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 136,
+			"position" : [187, 77],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"clipboard_paste" : {
+			"base" : "/animationtool/mainui/image/paste.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [173, 75]
+		},
+		
+		"clipboard_copy" : {
+			"base" : "/animationtool/mainui/image/copy.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [160, 75]
+		},
+
+		"canvas" : {
+			"zlevel" : 4,
+			"type" : "canvas",
+			"rect" : [160, 2, 327, 73],
+			"captureMouseEvents" : true,
+			"captureKeyboardEvents" : false
+		},
+		
+		"animationInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "null",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 162,
+			"position" : [162, 168],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"waitInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 61,
+			"regex" : "[0-9\\.]{0,37}",
+			"position" : [15, 155],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		/*
+		"status1" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [2, 155],
+			"value" : "Disconnected"
+		},*/
+		
+		"status2" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [175, 154],
+			"value" : "Key: 1"
+		},
+		
+		"sounds_TEXT" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [161, 140],
+			"value" : "Sounds"
+		},
+		"soundsInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 125,
+			"position" : [200, 142],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"state_TEXT" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [161, 127],
+			"value" : "State"
+		},
+		"stateInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 125,
+			"position" : [200, 129],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"particle_TEXT" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [161, 114],
+			"value" : "Particle"
+		},
+		"particleInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 125,
+			"position" : [200, 116],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"lights_TEXT" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [161, 101],
+			"value" : "Lights"
+		},
+		"lightsInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 125,
+			"position" : [200, 103],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"events_TEXT" : {
+			"zlevel" : 100,
+			"type" : "label",
+			"position" : [161, 88],
+			"value" : "Events"
+		},
+		"eventsInput" : {
+			"vAnchor" : "bottom",
+			
+			"callback" : "call",
+			"enterKey" : "call",
+			
+			"hAnchor" : "left",
+			"zlevel" : 15,
+			"type" : "textbox",
+			
+			"color" : "white",
+			
+			"textAlign" : "left",
+			"maxWidth" : 125,
+			"position" : [200, 90],
+			"fontSize" : 7,
+			"caption" : "1"
+		},
+		
+		"background1" : {
+			"file" : "/animationtool/mainui/image/bg1.png",
+			"zlevel" : 1,
+			"type" : "image",
+			"position" : [0, 0]
+		},
+		
+		"play" : {
+			"base" : "/animationtool/mainui/image/play.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [316, 153]
+		},
+
+		/*
+		"stop" : {
+			"base" : "/animationtool/mainui/image/stop.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [242, 153]
+		},
+		*/
+
+		"next" : {
+			"base" : "/animationtool/mainui/image/right.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [292, 153]
+		},
+		
+		"previous" : {
+			"base" : "/animationtool/mainui/image/left.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [280, 153]
+		},
+		
+		"delete" : {
+			"base" : "/animationtool/mainui/image/delete.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [254, 153]
+		},
+		
+		"add" : {
+			"base" : "/animationtool/mainui/image/add.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [242, 153]
+		},
+		
+		"paste" : {
+			"base" : "/animationtool/mainui/image/paste.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [230, 153]
+		},
+		
+		"copyy" : {
+			"base" : "/animationtool/mainui/image/copy.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [218, 153]
+		},
+		
+		"reload" : {
+			"base" : "/animationtool/mainui/image/reload.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"position" : [160, 153]
+		},
+		
+		"save" : {
+			"base" : "/animationtool/mainui/image/button1.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"caption" : "Save Animation",
+			"position" : [2, 166]
+		},
+		
+		"load" : {
+			"base" : "/animationtool/mainui/image/button1.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"caption" : "Load Animation",
+			"position" :[81, 166]
+		},
+		
+		"copytransform" : {
+			"base" : "/animationtool/mainui/image/button1.png",
+			"zlevel" : 1,
+			"type" : "button",
+			"pressedOffset" : [0, -1],
+			"callback" : "call",
+			"caption" : "Copy transform",
+			"position" :[81, 153]
+		},
+		
+		"transforms" : {
+			"buttons" : {
+				"vertical" : {
+					"forward" : {
+						"hover" : "/animationtool/mainui/image/scrollbar/sup.png?brightness=60",
+						"pressed" : "",
+						"base" : "/animationtool/mainui/image/scrollbar/sup.png"
+					},
+					"backward" : {
+						"hover" : "/animationtool/mainui/image/scrollbar/sdown.png?brightness=60",
+						"pressed" : "",
+						"base" : "/animationtool/mainui/image/scrollbar/sdown.png"
+					}
+				},
+				"horizontal" : {
+					"forward" : {
+						"hover" : "/interface/scrollarea/harrow-forwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-forward.png"
+					},
+					"backward" : {
+						"hover" : "/interface/scrollarea/harrow-backwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-backward.png"
+					}
+				}
+			},
+			"children" : {
+				"list" : {
+					"schema" : {
+						"listTemplate" : {
+							"background" : {
+								"file" : "/animationtool/mainui/image/listobj.png",
+								"zlevel" : -1,
+								"type" : "image",
+								"position" : [1, 0]
+							},
+							"name" : {
+								"vAnchor" : "mid",
+								"hAnchor" : "left",
+								"type" : "label",
+								"width" : 13,
+								"position" : [2, 6],
+								"value" : "test"
+							}
+						},
+						"spacing" : [0, 1],
+						"memberSize" : [65, 11],
+						"unselectedBG" : "/animationtool/mainui/image/listobj.png",
+						"selectedBG" : "/animationtool/mainui/image/listobj.png?brightness=60"
+					},
+					"type" : "list",
+					"position" : [1, 0]
+				}
+			},
+			"rect" : [2, 2, 79, 151],
+			"type" : "scrollArea",
+			"zlevel" : 15,
+			"thumbs" : {
+				"vertical" : {
+					"hover" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png?brightness=60",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png?brightness=60",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png?brightness=60"
+					},
+					"pressed" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png?brightness=60",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png?brightness=60",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png?brightness=60"
+					},
+					"base" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png"
+					}
+				},
+				"horizontal" : {
+					"hover" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"pressed" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"base" : {
+						"inner" : "/interface/scrollarea/hthumb-inner.png",
+						"begin" : "/interface/scrollarea/hthumb-begin.png",
+						"end" : "/interface/scrollarea/hthumb-end.png"
+					}
+				}
+			}
+		},
+		
+		"values" : {
+			"buttons" : {
+				"vertical" : {
+					"forward" : {
+						"hover" : "/animationtool/mainui/image/scrollbar/sup.png?brightness=60",
+						"pressed" : "",
+						"base" : "/animationtool/mainui/image/scrollbar/sup.png"
+					},
+					"backward" : {
+						"hover" : "/animationtool/mainui/image/scrollbar/sdown.png?brightness=60",
+						"pressed" : "",
+						"base" : "/animationtool/mainui/image/scrollbar/sdown.png"
+					}
+				},
+				"horizontal" : {
+					"forward" : {
+						"hover" : "/interface/scrollarea/harrow-forwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-forward.png"
+					},
+					"backward" : {
+						"hover" : "/interface/scrollarea/harrow-backwardhover.png",
+						"pressed" : "",
+						"base" : "/interface/scrollarea/harrow-backward.png"
+					}
+				}
+			},
+			"children" : {
+				"list" : {
+					"schema" : {
+						"listTemplate" : {
+							"background" : {
+								"file" : "/animationtool/mainui/image/listobj.png",
+								"zlevel" : -1,
+								"type" : "image",
+								"position" : [1, 0]
+							},
+							"name" : {
+								"vAnchor" : "mid",
+								"hAnchor" : "left",
+								"type" : "label",
+								"width" : 13,
+								"position" : [2, 6],
+								"value" : "test"
+							}
+						},
+						"spacing" : [0, 1],
+						"memberSize" : [65, 11],
+						"unselectedBG" : "/animationtool/mainui/image/listobj.png",
+						"selectedBG" : "/animationtool/mainui/image/listobj.png?brightness=60"
+					},
+					"type" : "list",
+					"position" : [1, 0]
+				}
+			},
+			"rect" : [81, 2, 158, 151],
+			"type" : "scrollArea",
+			"zlevel" : 15,
+			"thumbs" : {
+				"vertical" : {
+					"hover" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png?brightness=60",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png?brightness=60",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png?brightness=60"
+					},
+					"pressed" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png?brightness=60",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png?brightness=60",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png?brightness=60"
+					},
+					"base" : {
+						"inner" : "/animationtool/mainui/image/scrollbar/scrollmid.png",
+						"begin" : "/animationtool/mainui/image/scrollbar/scrollbottom.png",
+						"end" : "/animationtool/mainui/image/scrollbar/scrolltop.png"
+					}
+				},
+				"horizontal" : {
+					"hover" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"pressed" : {
+						"inner" : "/interface/scrollarea/hthumb-innerhover.png",
+						"begin" : "/interface/scrollarea/hthumb-beginhover.png",
+						"end" : "/interface/scrollarea/hthumb-endhover.png"
+					},
+					"base" : {
+						"inner" : "/interface/scrollarea/hthumb-inner.png",
+						"begin" : "/interface/scrollarea/hthumb-begin.png",
+						"end" : "/interface/scrollarea/hthumb-end.png"
+					}
+				}
+			}
+		}
+
+	},
+
+	"canvasClickCallbacks" : {
+		"canvas" : "handleMouse"
+	},
+	
+	"scriptWidgetCallbacks" : [
+		"call"
+	],
+
+	"scripts" : ["/animationtool/mainui/main.lua"],
+	"scriptDelta" : 1
+}
