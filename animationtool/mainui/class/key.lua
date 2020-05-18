@@ -156,9 +156,11 @@ function module:copyTransform()
 	local uiConfig = root.assetJson("/animationtool/clipboardui/pane.json", {})
 	if self.frames[self.selected] then
 		local transforms = getWholeTransformConfig().transformationGroups or self:wholeDefaultTransformationGroups()
-		for i,v in pairs(transforms) do
+		for i,v in pairs(self.frames[self.selected].transforms) do
 			if transforms[i] then
-				transforms[i].transform = sb.jsonMerge(transforms[i].transform or {}, self.frames[self.selected].transforms[i] or {})
+                transforms[i].transform = sb.jsonMerge(transforms[i].transform or {}, self.frames[self.selected].transforms[i] or {})
+            else
+                transforms[i] = {ignore = true, transform = sb.jsonMerge({}, self.frames[self.selected].transforms[i] or {})} -- assume if its controlled by a script
             end
 		end
 		uiConfig.clipboard = sb.printJson(transforms,0)
