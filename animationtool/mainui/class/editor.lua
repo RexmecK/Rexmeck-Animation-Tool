@@ -20,7 +20,7 @@ end
 require "/scripts/vec2.lua"
 
 function module:update()
-    if self.editing.transform and self.editing.value and key.transformsDefault[self.editing.transform][self.editing.value] then
+    if self.editing.transform and self.editing.value and key.transformsDefault and key.transformsDefault[self.editing.transform] and key.transformsDefault[self.editing.transform][self.editing.value] then
         local changes = {0,0}
         if type(self.mouse1) == "table" and self.canvas then
             changes = vec2.sub(self.canvas:mousePosition(), self.mouse1.ePos)

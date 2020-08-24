@@ -23,7 +23,7 @@
 			"zlevel" : 100,
 			"type" : "label",
 			"position" : [3, 180],
-			"value" : "^#343434;RexmecK Animation Tool v0.4"
+			"value" : "^#343434;RexmecK Animation Tool v0.46"
 		},
 		
 		"clipboard_input" : {

@@ -10,7 +10,11 @@ function module:init()
     )
     widgetBind("play", 
         function() 
-            world.sendEntityMessage(player.loungingIn() or player.id(), "play", key:validate())
+            local keys = key:validate()
+            local newframe = key:frameDefault()
+            newframe.wait = 0.001
+            keys[#keys] = newframe
+            world.sendEntityMessage(player.loungingIn() or player.id(), "play", keys)
         end
     )
 end

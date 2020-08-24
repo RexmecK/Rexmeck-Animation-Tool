@@ -76,7 +76,7 @@ function module:legacyType(a)
 end
 
 function module:update()
-    if editor.editing.transform and editor.editing.value and key.transformsDefault[editor.editing.transform][editor.editing.value] and self:legacyType(key.transformsDefault[editor.editing.transform][editor.editing.value]) ~= self.lastEditingType then
+    if editor.editing.transform and editor.editing.value and key.transformsDefault and key.transformsDefault[editor.editing.transform] and key.transformsDefault[editor.editing.transform][editor.editing.value] and self:legacyType(key.transformsDefault[editor.editing.transform][editor.editing.value]) ~= self.lastEditingType then
         local val = key.transformsDefault[editor.editing.transform][editor.editing.value]
         local t = type(val)
         if t == "table" and #val == 2 then 

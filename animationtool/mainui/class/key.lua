@@ -116,6 +116,16 @@ end
 
 
 function getWholeTransformConfig()
+    if player.isLounging() then
+        local id = player.loungingIn()
+        local res, data = pcall(world.callScriptedEntity, id, "sb.makeUuid")
+        if res then
+            local res2, data2 = pcall(world.callScriptedEntity, id, "config.getAnimation")
+            if res2 then
+                return data2
+            end
+        end
+    end
 	local item = {}
 	local handItem = world.entityHandItemDescriptor(player.id(), "primary")
     local handAltItem = world.entityHandItemDescriptor(player.id(), "alt")
@@ -155,8 +165,9 @@ end
 function module:copyTransform()
 	local uiConfig = root.assetJson("/animationtool/clipboardui/pane.json", {})
 	if self.frames[self.selected] then
-		local transforms = getWholeTransformConfig().transformationGroups or self:wholeDefaultTransformationGroups()
-		for i,v in pairs(self.frames[self.selected].transforms) do
+		local transforms = getWholeTransformConfig().transformationGroups--sb.jsonMerge(, self:wholeDefaultTransformationGroups())
+        for i,v in pairs(transforms) do --self.frames[self.selected].transforms
+            sb.logInfo(i)
 			if transforms[i] then
                 transforms[i].transform = sb.jsonMerge(transforms[i].transform or {}, self.frames[self.selected].transforms[i] or {})
             else
